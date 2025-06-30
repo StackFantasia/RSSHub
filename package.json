@@ -21,8 +21,9 @@
         "lib"
     ],
     "scripts": {
-        "build": "tsx scripts/workflow/build-routes.ts && tsdown",
+        "build": "tsx scripts/workflow/build-routes.ts && tsdown && npm run build:radar",
         "build:docs": "tsx scripts/workflow/build-docs.ts",
+        "build:radar": "node lib/radar/build-radar.js",
         "dev": "cross-env NODE_ENV=dev tsx watch --inspect --clear-screen=false lib/index.ts",
         "dev:cache": "cross-env NODE_ENV=production tsx watch --clear-screen=false lib/index.ts",
         "format": "prettier \"**/*.{ts,tsx,js,json}\" --write --experimental-cli && eslint --cache --fix \"**/*.{ts,tsx,js,yml}\"",
