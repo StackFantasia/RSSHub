@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/DIYgod/RSSHub.git"
+        "url": "git+https://github.com/StackFantasia/RSSHub.git"
     },
     "license": "MIT",
     "author": "DIYgod",
@@ -21,9 +21,8 @@
         "lib"
     ],
     "scripts": {
-        "build": "tsx scripts/workflow/build-routes.ts && tsdown && npm run build:radar",
+        "build": "tsx scripts/workflow/build-routes.ts && tsdown",
         "build:docs": "tsx scripts/workflow/build-docs.ts",
-        "build:radar": "node lib/radar/build-radar.js",
         "dev": "cross-env NODE_ENV=dev tsx watch --inspect --clear-screen=false lib/index.ts",
         "dev:cache": "cross-env NODE_ENV=production tsx watch --clear-screen=false lib/index.ts",
         "format": "prettier \"**/*.{ts,tsx,js,json}\" --write --experimental-cli && eslint --cache --fix \"**/*.{ts,tsx,js,yml}\"",
@@ -128,7 +127,7 @@
         "source-map": "0.7.4",
         "telegram": "2.26.22",
         "title": "4.0.1",
-        "tldts": "7.0.9",
+        "tldts": "^7.0.9",
         "tosource": "2.0.0-alpha.3",
         "tough-cookie": "5.1.2",
         "tsx": "4.20.3",
